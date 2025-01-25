@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+
+body {
+    background-image: url(https://i.pinimg.com/550x/79/0e/74/790e74630d1a5bac9ac426a0a1c17967.jpg);
+    background-size: cover;
+    min-height: 100dvh;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 30px 0;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    color: aliceblue;
+    padding: clamp(0.625rem, -0.0781rem + 3.125vw, 1.875rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    filter: drop-shadow(0px 0px 6px red);
+    font-family: "Playwrite IN", serif;
+    font-size: clamp(0.75rem, 0.1172rem + 2.8125vw, 1.875rem);
+    animation: title 2s infinite;
+}
+
+@keyframes title {
+    0% {
+        filter: drop-shadow(0px 0px 6px red);
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 6px darkblue);
+    }
+
+    100% {
+        filter: drop-shadow(0px 0px 6px red);
+    }
+}
+
+.wrapper {
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: clamp(1.875rem, -2.3438rem + 18.75vw, 9.375rem);
+
+    @media (max-width:768px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width:480px) {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    div {
+        background-color: #000000aa;
+        color: #fff;
+        border: 5px solid #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+
+
+        h1 {
+            font-size: clamp(1.5625rem, 0.332rem + 5.4688vw, 3.75rem);
+        }
+
+        h3 {
+            font-size: clamp(0.9375rem, 0.4102rem + 2.3438vw, 1.875rem);
+        }
+    }
+
+}
+
+
+.bg {
+    position: absolute;
+    background-image: url(https://cdn-1.aki.kg/cdn-st-0/qcy/Q/1591059.889fed76b9965400bbb87c1e789ec57b.jpg);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    animation: 2s bg infinite;
+    opacity: 0;
+}
+
+@keyframes bg {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 85%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
