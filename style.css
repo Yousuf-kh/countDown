@@ -100,7 +100,7 @@ body {
     background-position: center;
 
     @media (max-width:480px) {
-        background-image: url(https://www.shutterstock.com/image-photo/prisoner-male-hands-criminal-handcuffs-260nw-2453574197.jpg);
+        background-image: url(bg.jpg);
     }
 
     z-index: -1;
